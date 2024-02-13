@@ -27,6 +27,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    // Step 4. Set DataBindingUtil in build.gradle was already placed below - no need to change code
     buildFeatures {
         dataBinding true
     }
