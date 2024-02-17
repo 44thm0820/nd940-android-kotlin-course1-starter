@@ -1,57 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.udacity.shoestore.LoginFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/loginConstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".LoginFragment">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/email"
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toTopOf="@+id/editEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop="264dp"
             android:ems="10"
-            android:hint="Enter Email Address"
+            android:textSize="24sp"
             android:inputType="textEmailAddress"
-            android:textAlignment="center"
-            tools:layout_editor_absoluteX="104dp"
-            tools:layout_editor_absoluteY="254dp" />
+            android:hint="Enter Email Address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/editPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:ems="10"
-            android:hint="Enter Password"
+            android:textSize="24sp"
+            android:hint="Password"
             android:inputType="textPassword"
-            android:textAlignment="center"
-            tools:layout_editor_absoluteX="106dp"
-            tools:layout_editor_absoluteY="331dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
         <Button
-            android:id="@+id/login"
+            android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log In"
-            tools:layout_editor_absoluteX="109dp"
-            tools:layout_editor_absoluteY="410dp" />
+            android:layout_marginTop="152dp"
+            android:text="Login"
+            app:layout_constraintBottom_toBottomOf="@+id/createButton"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
         <Button
-            android:id="@+id/create"
+            android:id="@+id/createButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign Up"
-            tools:layout_editor_absoluteX="226dp"
-            tools:layout_editor_absoluteY="408dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
-        <Switch
-            android:id="@+id/loginsignup"
-            android:layout_width="205dp"
-            android:layout_height="43dp"
-            android:text="Log In or Sign Up"
-            tools:layout_editor_absoluteX="111dp"
-            tools:layout_editor_absoluteY="485dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

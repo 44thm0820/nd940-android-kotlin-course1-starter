@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.udacity.shoestore.WelcomeFragment">
+    tools:context="com.udacity.shoestore.InstructionFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/welcomeConstraint"
+        android:id="@+id/instructionConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
         <TextView
-            android:id="@+id/textview1"
+            android:id="@+id/textview3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="This is first paragraph (textview1) of Welcome Page"
+            android:text="This is textview3 paragraph of Instruction Page"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/textview2"/>
+            app:layout_constraintBottom_toTopOf="@id/textview4"/>
 
         <TextView
-            android:id="@+id/textview2"
+            android:id="@+id/textview4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="This is second paragraph (textview2) of Welcome Page"
+            android:text="This is textview4 paragraph of Instruction Page"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/instructionsButton"
+            android:id="@+id/shoelistButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="152dp"
-            android:text="To Instructions Page"
+            android:text="To ShoeList Page"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview2" />
+            app:layout_constraintTop_toBottomOf="@+id/textview3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
