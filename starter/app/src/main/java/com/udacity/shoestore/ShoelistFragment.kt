@@ -20,7 +20,7 @@ class ShoelistFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        // Below two lines are part of Step 9, creating a class that extends viewmodel
+        // Below two lines are part of Step 10, creating a class that extends viewmodel
         Log.i("ShoelistFragment", "Called ViewModelProvider()[]!")
         viewModel = ViewModelProvider(this)[ShoelistViewModel::class.java]
 
