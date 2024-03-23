@@ -17,14 +17,14 @@
             <TextView
                 android:id="@+id/textview5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="381dp"
                 android:padding="16dp"
                 android:text="@string/textview5" />
 
             <TextView
                 android:id="@+id/textview6"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="518dp"
                 android:padding="16dp"
                 android:text="@string/textview6" />
 
