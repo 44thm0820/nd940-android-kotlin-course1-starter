@@ -1,14 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".DetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/detail" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:text="Name"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:inputType="text"
+            android:text="Enter Name" />
+
+        <TextView
+            android:id="@+id/Size"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:text="Size" />
+
+        <EditText
+            android:id="@+id/editSize"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:inputType="numberDecimal"
+            android:text="Enter Size" />
+
+        <TextView
+            android:id="@+id/Company"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:text="Company" />
+
+        <EditText
+            android:id="@+id/editCompany"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:inputType="text"
+            android:text="Enter Company" />
+
+        <TextView
+            android:id="@+id/Description"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:text="Description" />
+
+        <EditText
+            android:id="@+id/editDescription"
+            android:layout_width="163dp"
+            android:layout_height="42dp"
+            android:inputType="text"
+            android:text="Enter Description" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="Size,editSize"
+            app:flow_horizontalStyle="packed"
+            app:flow_wrapMode="aligned"
+            app:layout_constraintBottom_toTopOf="@+id/flow14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flow13" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/flow13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:constraint_referenced_ids="Name,editName"
+                    app:flow_horizontalStyle="packed"
+                    app:flow_wrapMode="aligned"
+                    app:layout_constraintBottom_toTopOf="@+id/flow12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/flow14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="Company,editCompany"
+                    app:flow_horizontalStyle="packed"
+                    app:flow_wrapMode="aligned"
+                    app:layout_constraintBottom_toTopOf="@+id/flow15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/flow12" />
+
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/flow15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="Description,editDescription"
+                    app:flow_horizontalStyle="packed"
+                    app:flow_wrapMode="aligned"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/flow14" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
