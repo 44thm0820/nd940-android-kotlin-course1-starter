@@ -18,14 +18,13 @@ class ShoelistViewModel : ViewModel() {
 
     init {
         Log.i("ShoelistViewModel", "ShoelistViewModel created!")
-
     }
 
     override fun onCleared() {
         super.onCleared()
         Log.i("ShoelistViewModel", "ShoelistViewModel destroyed!")
     }
-    private fun resetShoeList() {
+    fun resetShoeList() {
         _shoeList.value = mutableListOf(
             Shoe("AirForceLow",
             9.0,

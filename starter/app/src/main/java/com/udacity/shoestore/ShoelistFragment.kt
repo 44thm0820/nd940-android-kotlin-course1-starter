@@ -28,7 +28,7 @@ class ShoelistFragment : Fragment() {
 //    private var _binding: ActivityMainBinding? = null
 //    private val binding get() = _binding
 
-    private val sharedViewModel: ShoelistViewModel by activityViewModels()
+    val viewModel: ShoelistViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,32 +41,28 @@ class ShoelistFragment : Fragment() {
             v.findNavController()
                 .navigate(ShoelistFragmentDirections.actionShoelistFragmentToDetailFragment())
         }
-        // Below two lines are part of Step 10, creating a class that extends viewmodel
-//        Log.i("ShoelistFragment", "Called ViewModelProvider()[]!")
-//        sharedViewModel = ViewModelProvider(this)[ShoelistViewModel::class.java]
-//        sharedViewModel.shoeList.observe(viewLifecycleOwner, { newList ->
-//            binding.textView5.setText(newList)
-//        } )
+        viewModel.resetShoeList()
+        viewModel.shoeList.observe(viewLifecycleOwner) { newList ->
+            binding.textview5.setText(newList.toString())
+        }
+        println("what up ${viewModel.shoeList.value}")
+
+        // adding a Logout menu in the shoe list screen
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
                 menuInflater.inflate(R.menu.logout_menu, menu)
             }
-
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 return when (menuItem.itemId) {
                     R.id.loginFragment -> {
                         findNavController().popBackStack(R.id.loginFragment, false)
                         true
                     }
-
                     else -> false
                 }
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
         return binding.root
-        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_shoelist, container, false)
     }
-
 }
